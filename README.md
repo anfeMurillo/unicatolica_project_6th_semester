@@ -48,7 +48,7 @@ Desiciones de arquitectura en el Backend.
 
 Este proyecto trabaja sobre la metodologia GitHub Flow.
 
-## 🛠️ Git Best Practices (Senior Level)
+## Git Best Practices
 
 Para mantener un historial limpio, escalable y profesional, seguimos estas reglas:
 
