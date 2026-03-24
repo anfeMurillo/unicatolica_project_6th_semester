@@ -1,0 +1,216 @@
+{
+  "version": "1.0.0",
+  "darkMode": true,
+  "gridEnabling": false,
+  "detailLevel": "All",
+  "tablePositions": [
+    {
+      "name": "usuarios_propietarios",
+      "schemaName": "public",
+      "x": 48,
+      "y": 816
+    },
+    {
+      "name": "cadenas",
+      "schemaName": "public",
+      "x": 232,
+      "y": 328
+    },
+    {
+      "name": "cliente",
+      "schemaName": "public",
+      "x": 488,
+      "y": 384
+    },
+    {
+      "name": "local",
+      "schemaName": "public",
+      "x": 800,
+      "y": 544
+    },
+    {
+      "name": "mesas",
+      "schemaName": "public",
+      "x": 864,
+      "y": 800
+    },
+    {
+      "name": "trabajadores",
+      "schemaName": "public",
+      "x": 304,
+      "y": 952
+    },
+    {
+      "name": "productos",
+      "schemaName": "public",
+      "x": 352,
+      "y": 48
+    },
+    {
+      "name": "ordenes",
+      "schemaName": "public",
+      "x": 592,
+      "y": 784
+    },
+    {
+      "name": "ventas",
+      "schemaName": "public",
+      "x": 112,
+      "y": 536
+    }
+  ],
+  "tableGroupCollapseStates": [],
+  "stickyNoteLayouts": [],
+  "referencePaths": [
+    {
+      "firstFieldNames": [
+        "id_propietario"
+      ],
+      "firstTableName": "usuarios_propietarios",
+      "firstSchemaName": "public",
+      "firstRelation": "1",
+      "secondFieldNames": [
+        "id_propietario"
+      ],
+      "secondTableName": "cadenas",
+      "secondSchemaName": "public",
+      "secondRelation": "*",
+      "checkPoints": []
+    },
+    {
+      "firstFieldNames": [
+        "id_cadena"
+      ],
+      "firstTableName": "cadenas",
+      "firstSchemaName": "public",
+      "firstRelation": "1",
+      "secondFieldNames": [
+        "id_cadena"
+      ],
+      "secondTableName": "local",
+      "secondSchemaName": "public",
+      "secondRelation": "*",
+      "checkPoints": []
+    },
+    {
+      "firstFieldNames": [
+        "id_local"
+      ],
+      "firstTableName": "local",
+      "firstSchemaName": "public",
+      "firstRelation": "1",
+      "secondFieldNames": [
+        "id_local"
+      ],
+      "secondTableName": "mesas",
+      "secondSchemaName": "public",
+      "secondRelation": "*",
+      "checkPoints": []
+    },
+    {
+      "firstFieldNames": [
+        "id_local"
+      ],
+      "firstTableName": "local",
+      "firstSchemaName": "public",
+      "firstRelation": "1",
+      "secondFieldNames": [
+        "id_local"
+      ],
+      "secondTableName": "trabajadores",
+      "secondSchemaName": "public",
+      "secondRelation": "*",
+      "checkPoints": []
+    },
+    {
+      "firstFieldNames": [
+        "id_cadena"
+      ],
+      "firstTableName": "cadenas",
+      "firstSchemaName": "public",
+      "firstRelation": "1",
+      "secondFieldNames": [
+        "id_cadena"
+      ],
+      "secondTableName": "productos",
+      "secondSchemaName": "public",
+      "secondRelation": "*",
+      "checkPoints": []
+    },
+    {
+      "firstFieldNames": [
+        "id_cliente"
+      ],
+      "firstTableName": "cliente",
+      "firstSchemaName": "public",
+      "firstRelation": "1",
+      "secondFieldNames": [
+        "id_cliente"
+      ],
+      "secondTableName": "ordenes",
+      "secondSchemaName": "public",
+      "secondRelation": "*",
+      "checkPoints": []
+    },
+    {
+      "firstFieldNames": [
+        "id_trabajador"
+      ],
+      "firstTableName": "trabajadores",
+      "firstSchemaName": "public",
+      "firstRelation": "1",
+      "secondFieldNames": [
+        "id_empleado"
+      ],
+      "secondTableName": "ordenes",
+      "secondSchemaName": "public",
+      "secondRelation": "*",
+      "checkPoints": []
+    },
+    {
+      "firstFieldNames": [
+        "id_mesa"
+      ],
+      "firstTableName": "mesas",
+      "firstSchemaName": "public",
+      "firstRelation": "1",
+      "secondFieldNames": [
+        "id_mesa"
+      ],
+      "secondTableName": "ordenes",
+      "secondSchemaName": "public",
+      "secondRelation": "*",
+      "checkPoints": []
+    },
+    {
+      "firstFieldNames": [
+        "id_cliente"
+      ],
+      "firstTableName": "cliente",
+      "firstSchemaName": "public",
+      "firstRelation": "1",
+      "secondFieldNames": [
+        "id_cliente"
+      ],
+      "secondTableName": "ventas",
+      "secondSchemaName": "public",
+      "secondRelation": "*",
+      "checkPoints": []
+    },
+    {
+      "firstFieldNames": [
+        "id_orden"
+      ],
+      "firstTableName": "ordenes",
+      "firstSchemaName": "public",
+      "firstRelation": "1",
+      "secondFieldNames": [
+        "id_orden"
+      ],
+      "secondTableName": "ventas",
+      "secondSchemaName": "public",
+      "secondRelation": "*",
+      "checkPoints": []
+    }
+  ]
+}

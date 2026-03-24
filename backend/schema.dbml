@@ -1,0 +1,73 @@
+Project Restaurante {
+  database_type: 'PostgreSQL'
+  Note: 'Base de datos para la gestión de cadenas de restaurantes'
+}
+
+Table usuarios_propietarios {
+  id_propietario int [pk, increment]
+  nombre varchar(100)
+  correo varchar(100)
+  clave_hash varchar(100)
+}
+
+Table cadenas {
+  id_cadena int [pk, increment]
+  id_propietario int [ref: > usuarios_propietarios.id_propietario]
+  nombre varchar(100)
+  descripcion varchar
+}
+
+Table cliente {
+  id_cliente int [pk, increment]
+  nombre varchar(100)
+  correo varchar(100)
+  clave_hash varchar(100)
+}
+
+Table local {
+  id_local int [pk, increment]
+  id_cadena int [ref: > cadenas.id_cadena]
+  nombre varchar(100)
+  direccion varchar(100)
+}
+
+Table mesas {
+  id_mesa int [pk, increment]
+  numero int
+  id_local int [ref: > local.id_local]
+}
+
+Table trabajadores {
+  id_trabajador int [pk, increment]
+  id_local int [ref: > local.id_local]
+  nombre varchar(100)
+  apellido varchar(100)
+  cargo varchar(50)
+  correo varchar(100)
+  clave_hash varchar(100)
+}
+
+Table productos {
+  id_producto int [pk, increment]
+  id_cadena int [ref: > cadenas.id_cadena]
+  nombre varchar(100)
+  descripcion varchar
+  precio float
+}
+
+Table ordenes {
+  id_orden int [pk, increment]
+  fecha datetime
+  id_cliente int [ref: > cliente.id_cliente]
+  id_empleado int [ref: > trabajadores.id_trabajador]
+  id_mesa int [ref: > mesas.id_mesa]
+  estado varchar(50)
+}
+
+Table ventas {
+  id_venta int [pk, increment]
+  id_cliente int [ref: > cliente.id_cliente]
+  id_orden int [ref: > ordenes.id_orden]
+  fecha datetime
+  valor float
+}
